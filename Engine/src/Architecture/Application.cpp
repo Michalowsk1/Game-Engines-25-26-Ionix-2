@@ -16,6 +16,9 @@ namespace IonixEngine
         //Initialise layers...
         layerEditor = new LayerEditor();
         m_LayerStack.PushLayer(layerEditor);
+
+        layerInput = new LayerInput();
+        m_LayerStack.PushLayer(layerInput);
     }
 
     Application::~Application() 

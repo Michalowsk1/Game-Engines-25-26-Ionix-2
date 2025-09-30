@@ -1,49 +1,26 @@
-#include "LayerSystem/Layers/LayerEditor.h"
+#include "LayerSystem/Layers/LayerInput.h"
 #include "EventSystem/Event.h"
 #include "Architecture/Application.h"
 #include <iostream>
 
 namespace IonixEngine
 {
-    void LayerEditor::OnAttach() {}
+    void LayerInput::OnAttach() {}
 
-    void LayerEditor::OnDetach() {}
+    void LayerInput::OnDetach() {}
 
-    void LayerEditor::OnUpdate() {}
+    void LayerInput::OnUpdate() 
+    {
+        std::cout << "Input Update ran\n";
+    }
 
-    void LayerEditor::OnEvent(IonixEvent& e)
+    void LayerInput::OnEvent(IonixEvent& e)
     {
         // Switch statement routes the event and invokes the relevant event handler
 
         switch (e.Type)
         {
-            case IonixEventType::WindowClosed:
-            {
-                auto& windowEvent = static_cast<WindowClosedEvent&>(e);
-                OnWindowClosedEvent(windowEvent);
-                break;
-            }
 
-            case IonixEventType::WindowMinimized:
-            {
-                auto& windowEvent = static_cast<WindowMinimizedEvent&>(e);
-                OnWindowMinimizdEvent(windowEvent);
-                break;
-            }
-
-            //case IonixEventType::WindowShown:
-            //{
-            //    auto& windowEvent = static_cast<WindowShownEvent&>(e);
-            //    OnWindowShownEvent(windowEvent);
-            //    break;
-            //}
-
-            //case IonixEventType::WindowMaximized:
-            //{
-            //    auto& windowEvent = static_cast<WindowMaximizedEvent&>(e);
-            //    OnWindowMaximizedEvent(windowEvent);
-            //    break;
-            //}
 
             // Add more cases as needed.... (Note: Most engine features don't require events, they
             //                              can just be callable functions.

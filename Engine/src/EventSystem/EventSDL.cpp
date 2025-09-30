@@ -22,6 +22,27 @@ namespace IonixEngine
                     WindowClosedEvent event;
                     m_EventCallback(event);
                 }
+
+            case SDL_WINDOWEVENT_MINIMIZED:
+                if (m_EventCallback)
+                {
+                    WindowMinimizedEvent event;
+                    m_EventCallback(event);
+                }
+
+            //case SDL_WINDOWEVENT_SHOWN:
+            //    if (m_EventCallback)
+            //    {
+            //        WindowShownEvent event;
+            //        m_EventCallback(event);
+            //    }
+
+            //case SDL_WINDOWEVENT_MAXIMIZED:
+            //    if (m_EventCallback)
+            //    {
+            //        WindowMaximizedEvent event;
+            //        m_EventCallback(event);
+            //    }
                 break;
             }
         }
