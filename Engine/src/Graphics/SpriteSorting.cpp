@@ -6,4 +6,6 @@ Array of sprites which represent z - Level(use array of sprite references, just 
 		iterate array mutiple times for z level OR sort array by z order and iterate once
 //SDLayer - representation of layers
 
+//Discussing more ideas
+
 */
