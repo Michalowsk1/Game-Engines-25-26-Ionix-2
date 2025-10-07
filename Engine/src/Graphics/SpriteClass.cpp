@@ -10,15 +10,15 @@ namespace IonixEngine
 		rend = Application::Get().GetWindow().GetSdlRenderer();
 		fileName = file;
 	}
-	void Sprite::changeTexture(const char *file, SDL_Renderer* renderer)
+	void Sprite::changeTexture(const char *file)
 	{
 		// renderer will likely be m_renderer (in window.h)
 		//img = IMG_LoadTexture(renderer, file);
 	}
 
 	void Sprite::draw(const int x, const int y, const int w, const int h) {
-
-		// code for rendering an image
+		rend = Application::Get().GetWindow().GetSdlRenderer();
+		// code for rendering an image .
 		// to get working in OnUpdate:
 		// copy all of this 
 		// replace rend with Application::Get().GetWindow().GetSdlRenderer()

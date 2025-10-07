@@ -19,7 +19,7 @@ namespace IonixEngine
 		void draw(const int x, const int y, const int w, const int h);
 		void changeSize();
 		void move();
-		void changeTexture(const char* file, SDL_Renderer* renderer);
+		void changeTexture(const char* file);
 		void clear();
 		void del();
 
